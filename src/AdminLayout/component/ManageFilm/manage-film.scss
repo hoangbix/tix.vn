@@ -1,0 +1,42 @@
+
+
+.edit-input {
+    position: relative;
+}
+
+.edit-hinh {
+    position: absolute;
+}
+
+
+.ant-picker-clear {
+       
+    display: none !important;
+
+}
+
+.showtime__admin {
+    width:  90%;
+    height: 500px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    &__content {
+        margin: auto;
+        padding: 1rem 3rem;
+
+        form {
+            padding-top: 1rem;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: black;
+        }
+        h5 {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,164 @@
+@use '../../scss/' as *;
+
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #222;
+    padding: 2rem 0;
+
+    &__content {
+        width:80%;
+        height: 100%;
+        margin: auto;
+        padding-top: 2rem;
+       
+
+        &__top {
+            color: #fff;
+            border-bottom: 1px solid rgba(204, 204, 204, 0.578);
+            padding-bottom: 2rem;
+
+            &-ul {
+                padding-top: 1.5rem;
+                
+                @include tablet{
+                   text-align: center;
+                   
+                }
+
+                a {
+                    font-size: 12px !important;
+                    font-size: 80%;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    color: #949494;
+                    display: block;
+                    transition: all .2s;
+                    line-height: 2;
+                    text-decoration: none;
+                    text-align: center;
+                    padding: 10px 0;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                    @include tablet{
+                        display: inline-block;
+                        padding: 0 10px;
+                       
+                    }
+                    @include mobile-medium-max {
+                        display: inline;
+                        padding: 0 10px;
+                    }
+                    @include mobile {
+                        display: inline-block;
+                    }
+                }
+                @include mobile {
+                    text-align: center;
+                }
+            }
+
+            &-menu2-doitac {
+                padding-top: 1.5rem;
+                a {
+
+                    img {
+                        border-radius: 50%;
+                        height: 30px;
+                        width: 30px;
+                        margin-right: 15px;
+                        background-color: #fff;
+                    }
+                }
+            }
+            &-menu3 {
+                .footer__content__top-social {
+                    margin-top: 1.5rem;
+                    ul {
+                        @include tablet {
+                            @include flex(center, center);
+                         }
+                     
+                        li {
+                            padding: 10px 0;
+                            img {
+                                height: 30px;
+                                width: auto;
+                                margin: auto;
+                                cursor: pointer;
+                               
+                            }
+                           
+                             @include tablet {
+                                display: inline-block;
+                                padding: 0 20px;
+                             }
+                            
+                        }
+                    }
+                    
+                    
+                    
+                }
+               
+               
+            }
+            
+        }
+        &__footer {
+            margin-top: 2rem;
+           
+            &--top {
+                img {
+                    width: 100px;
+                    height: auto;
+                    border-radius: 8px;
+                }
+               
+                @include mobile-medium-max {
+                    display:none;
+                }
+            }
+            &--body  {
+                
+                h4 {
+                    color: #fff;
+                    display: block;
+                    line-height: 1.8;
+                    font-size: 12px;
+                    font-weight: 600;
+                    
+                }
+                p {
+                    display: block;
+                    line-height: 1.8;
+                    color: #949494;
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin: 0;
+                }
+                
+            }
+            &--bottom { 
+
+                img {
+                    width: 100px;
+                    height: auto;
+                }
+                @include mobile-medium-max {
+                    display:none;
+                }
+            }
+        }
+    }
+
+    
+}
+
+h3 {
+    color: #fff;
+    text-align: center;
+}

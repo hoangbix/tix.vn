@@ -1,0 +1,218 @@
+
+{
+    "slides": [
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg",
+        "genre_ids": [
+          16,
+          35,
+          10751,
+          14
+        ],
+        "id": 568124,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "Encanto: Vùng đất thần kỳ",
+        "overview": "Câu chuyện về một gia đình phi thường, gia đình Madrigals, sống ẩn mình trong vùng núi Colombia, trong một ngôi nhà ma thuật, trong một thị trấn sôi động, ở một nơi kỳ diệu, quyến rũ được gọi là Encanto. Phép thuật của Encanto đã ban phước cho mọi đứa trẻ trong gia đình món quà độc nhất vô nhị từ siêu sức mạnh đến sức mạnh chữa lành — mọi đứa trẻ, trừ một đứa trẻ, Mirabel. Nhưng khi cô phát hiện ra rằng phép thuật xung quanh Encanto đang gặp nguy hiểm, Mirabel quyết định rằng cô, Madrigal bình thường duy nhất, có thể chỉ là hy vọng cuối cùng của gia đình ngoại lệ của cô.",
+        "popularity": 1962.34,
+        "poster_path": "https://image.tmdb.org/t/p/w500/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
+        "release_date": "2021-11-24",
+        "title": "Encanto: Vùng đất thần kỳ",
+        "video": false,
+        "vote_average": 7.7,
+        "vote_count": 5852
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/5P8SmMzSNYikXpxil6BYzJ16611.jpg",
+        "genre_ids": [
+          80,
+          9648,
+          53
+        ],
+        "id": 414906,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "The Batman",
+        "overview": "Trong năm thứ 2 chiến đấu với tội phạm, Batman phát hiện ra tham nhũng ở Thành phố Gotham, nơi kết nối với gia đình của chính anh ta trong khi đối mặt với một kẻ giết người hàng loạt được gọi là Riddler.",
+        "popularity": 1930.728,
+        "poster_path": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+        "release_date": "2022-03-01",
+        "title": "The Batman",
+        "video": false,
+        "vote_average": 7.9,
+        "vote_count": 2686
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/tj4lzGgHrfjnjVqAKkLIjFqPSyO.jpg",
+        "genre_ids": [
+          28,
+          878,
+          14
+        ],
+        "id": 526896,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "Morbius",
+        "overview": "Bị bệnh hiểm nghèo với căn bệnh rối loạn máu hiếm gặp, và quyết tâm cứu những người khác chịu số phận tương tự của mình, Tiến sĩ Michael Morbius thực hiện một canh bạc tuyệt vọng. Điều mà thoạt đầu có vẻ là một thành công triệt để sẽ sớm bộc lộ là một phương thuốc có khả năng tồi tệ hơn căn bệnh này.",
+        "popularity": 1742.669,
+        "poster_path": "https://image.tmdb.org/t/p/w500/6nhwr1LCozBiIN47b8oBEomOADm.jpg",
+        "release_date": "2022-03-30",
+        "title": "Morbius",
+        "video": false,
+        "vote_average": 5.7,
+        "vote_count": 259
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/fOy2Jurz9k6RnJnMUMRDAgBwru2.jpg",
+        "genre_ids": [
+          16,
+          10751,
+          35,
+          14
+        ],
+        "id": 508947,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "Turning Red",
+        "overview": "Mei, mười ba tuổi đang trải qua cảm giác khó xử khi là một thiếu niên với những bước ngoặt - khi quá phấn khích, cô ấy đã biến thành một con gấu trúc đỏ khổng lồ.",
+        "popularity": 5329.202,
+        "poster_path": "https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg",
+        "release_date": "2022-03-01",
+        "title": "Turning Red",
+        "video": false,
+        "vote_average": 7.5,
+        "vote_count": 1433
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/x747ZvF0CcYYTTpPRCoUrxA2cYy.jpg",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "id": 406759,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "Moonfall",
+        "overview": "Một lực bí ẩn đánh bật mặt trăng khỏi quỹ đạo của nó quanh Trái đất và khiến nó bị thương khi va chạm với sự sống như chúng ta đã biết.",
+        "popularity": 4501.778,
+        "poster_path": "https://image.tmdb.org/t/p/w500/odVv1sqVs0KxBXiA8bhIBlPgalx.jpg",
+        "release_date": "2022-02-03",
+        "title": "Moonfall",
+        "video": false,
+        "vote_average": 6.4,
+        "vote_count": 495
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/egoyMDLqCxzjnSrWOz50uLlJWmD.jpg",
+        "genre_ids": [
+          28,
+          878,
+          35,
+          10751
+        ],
+        "id": 675353,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "Sonic the Hedgehog 2",
+        "overview": "Sau khi định cư ở Green Hills, Sonic háo hức chứng tỏ mình có những gì cần thiết để trở thành một anh hùng thực sự. Thử nghiệm của anh ấy diễn ra khi Tiến sĩ Robotnik trở lại, lần này là với một đối tác mới, Knuckles, để tìm kiếm một viên ngọc lục bảo có sức mạnh hủy diệt các nền văn minh. Sonic hợp tác với người bạn phụ của mình, Tails, và họ cùng nhau bắt đầu một cuộc hành trình vượt địa cầu để tìm viên ngọc lục bảo trước khi nó rơi vào tay kẻ xấu.",
+        "popularity": 3032.171,
+        "poster_path": "https://image.tmdb.org/t/p/w500/1j6JtMRAhdO3RaXRtiWdPL5D3SW.jpg",
+        "release_date": "2022-03-30",
+        "title": "Sonic the Hedgehog 2",
+        "video": false,
+        "vote_average": 7.8,
+        "vote_count": 122
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/ewUqXnwiRLhgmGhuksOdLgh49Ch.jpg",
+        "genre_ids": [
+          28,
+          12,
+          35,
+          878
+        ],
+        "id": 696806,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "The Adam Project",
+        "overview": "Sau khi vô tình hạ cánh vào năm 2022, phi công máy bay chiến đấu du hành xuyên thời gian Adam Reed hợp tác với cậu bé 12 tuổi của mình trong một nhiệm vụ giải cứu tương lai.",
+        "popularity": 2289.346,
+        "poster_path": "https://image.tmdb.org/t/p/w500/wFjboE0aFZNbVOF05fzrka9Fqyx.jpg",
+        "release_date": "2022-03-11",
+        "title": "The Adam Project",
+        "video": false,
+        "vote_average": 7,
+        "vote_count": 1555
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/t7I942V5U1Ggn6OevN75u3sNYH9.jpg",
+        "genre_ids": [
+          28,
+          53
+        ],
+        "id": 760868,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "sv",
+        "original_title": "Svart krabba",
+        "overview": "To end an apocalyptic war and save her daughter, a reluctant soldier embarks on a desperate mission to cross a frozen sea carrying a top-secret cargo.",
+        "popularity": 2253.382,
+        "poster_path": "https://image.tmdb.org/t/p/w500/mcIYHZYwUbvhvUt8Lb5nENJ7AlX.jpg",
+        "release_date": "2022-03-18",
+        "title": "Black Crab",
+        "video": false,
+        "vote_average": 6.1,
+        "vote_count": 266
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/2hGjmgZrS1nlsEl5PZorn7EsmzH.jpg",
+        "genre_ids": [
+          28,
+          53
+        ],
+        "id": 823625,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "Blacklight",
+        "overview": "Travis Block is a shadowy Government agent who specializes in removing operatives whose covers have been exposed. He then has to uncover a deadly conspiracy within his own ranks that reaches the highest echelons of power.",
+        "popularity": 1932.649,
+        "poster_path": "https://image.tmdb.org/t/p/w500/bv9dy8mnwftdY2j6gG39gCfSFpV.jpg",
+        "release_date": "2022-02-10",
+        "title": "Blacklight",
+        "video": false,
+        "vote_average": 6,
+        "vote_count": 242
+      },
+      {
+        "adult": false,
+        "backdrop_path": "https://image.tmdb.org/t/p/original/iQFcwSGbZXMkeyKrxbPnwnRo5fl.jpg",
+        "genre_ids": [
+          28,
+          12,
+          878
+        ],
+        "id": 634649,
+        "videoSrc": "https://www.youtube.com/watch?v=UxPkK8gW0hs",
+        "original_language": "en",
+        "original_title": "Spider-Man: No Way Home",
+        "overview": "Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+        "popularity": 6064.019,
+        "poster_path": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+        "release_date": "2021-12-15",
+        "title": "Spider-Man: No Way Home",
+        "video": false,
+        "vote_average": 8.2,
+        "vote_count": 11022
+      }
+    ]
+   
+  }

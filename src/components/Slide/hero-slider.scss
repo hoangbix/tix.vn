@@ -1,0 +1,176 @@
+@use "../../scss/" as *;
+
+
+
+.hero-slide__item {
+    padding: 5rem 0;
+    width: 100%;
+    height: 580px;
+    background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgb(40, 40, 40), rgba(#000, 0));
+        @include overlay();
+        
+    }
+    
+    &__content {
+        @include flex(center,center);
+        position: relative;
+        &__info {
+            width: 55%;
+            padding: 0 3rem;
+            position: relative;
+            color: $white;
+            @include tablet {
+                width: 100%;
+                margin: 100px 0;
+            }
+            & > * ~ * {
+                margin-top:3rem
+            }
+            .title {
+                font-size:2.5rem;
+                font-weight:700;
+                line-height: 1;
+                color: $white;
+                @include tablet {
+                    font-size: 2rem;
+                    color: $white;
+                }
+            }
+            .overview {
+                font-weight: 600;
+                @include mobile {
+                    font-size: 11px;
+                }
+            }
+            .btns > * ~ * {
+                margin-left: 1rem;
+            }
+            .btns, .title, .overview {
+                opacity: 0;
+                transform: translateY(-100px);
+                transition: transform .5s ease, opacity .5s ease;
+               
+            }
+            
+            
+        }   
+
+        &__poster {
+            flex: 1;
+            @include flex(center, flex-start);
+            position: relative;
+
+            img{
+                width: 320px;
+                border-radius: $border-radius;
+                box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;     
+                transform: scale(0);
+                transition: transform 1s ease;      
+            }
+
+            @include tablet {
+                display: none;
+            }
+            
+        } 
+        
+    }
+    &.active  &__content &__content__poster{
+        img {
+            transform: scale(1)
+        }
+    }   
+    &.active >  &__content > &__content__info{
+        .btns, .title, .overview {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .title {
+            transition-delay: .3s, .3s;
+        }
+        .overview {
+            transition-delay: .6s, .6s;
+        }
+        .btns {
+            transition-delay: .9s, .9s;
+        }
+    } 
+   
+}
+
+
+.hero-slide__search {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    bottom: 40px;
+    height: 80px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 15px;
+    @include tablet {
+       display:none;
+    }
+   
+    &__items {
+        background-color:white;
+        @include flex(center,space-between);
+        padding: 5px;
+        padding-top: 20px;
+        border-radius: 15px;
+        width: 100%;
+
+       &__item {
+        @include flex(center,center);
+        width: 100%;
+        text-align: center;
+        border-right: 1px solid #ccc;
+        // padding: 0 10px;
+        &:focus, &.active, &:focus-visible {
+            outline: none;
+            border: none;
+        }
+
+        .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+            border: 1px solid transparent;
+        }
+        
+        select {
+            cursor: pointer;
+            width: 60%;
+        }
+        label {
+            width: 40%;
+            margin: 0;
+
+            
+            @include tablet-medium {
+                font-size: 12px;
+            }
+        }
+       }
+    }
+}
+
+
+.ant-select-dropdown{
+  width: 400px !important;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+    font-weight: 600;
+}

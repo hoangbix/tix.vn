@@ -1,0 +1,41 @@
+@use '../../../scss/' as *;
+
+
+.manage__user {
+
+   .edit__user__form {
+
+    .col-5 {
+        padding: 0 10px;
+    }
+   }
+
+	.ant-input {
+		border: none !important;
+		border-bottom: 1px solid #ccc !important;
+	}
+    .edit__user__form {
+        
+    }
+	
+}
+
+.input__error {
+    font-size: 11px;
+    font-weight: 400;
+    color: #FF4B2B;
+}
+
+.manager__form__footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+
+    button {
+        margin: 0 20px ;
+        width: 100px;
+    }
+}
+
+.ant-modal-footer {
+    display: none !important; 
+}

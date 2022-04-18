@@ -1,0 +1,78 @@
+@use  "../../scss/" as *;
+
+
+.news  {
+
+    &__content {
+            @include tablet {
+                padding: 0 20px;
+            }
+        .ant-tabs-tab {
+            font-size: 20px;
+            @include tablet {
+                
+               
+            }
+            @include mobile-medium-max {
+                font-size:15px;
+                padding: 0 10px;
+            }
+            @include mobile {
+                font-size:14px;
+                padding: 0 5px;
+            }
+        }
+        &__row  {
+            margin-top: 3rem;
+
+            .news__content__list {
+
+                &--items {
+                    padding-bottom: 20px;
+                    &-item {
+                        h2  {
+                            color: #000;
+                            font-size: 16px;
+                            display: block;
+                            max-height: 45px;
+                            text-decoration: none;
+                            transition: 0.2s;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            text-overflow: ellipsis;
+                        }
+                        p {
+                            text-align: justify;
+                            font-size: 13px;
+                            color: #4a4a4a;
+                            font-weight: 500;
+                            max-height: 60px;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            text-overflow: ellipsis;
+                        }
+                        .item-mini a{
+                            display: flex;
+
+                            img {
+                                padding: 10px 0;
+                            }
+
+                            p {
+                                padding: 0 10px;
+                            }
+                            &:hover p{
+                                color: $main-color;
+                            }
+                        }
+                        &:hover h2{
+                            color: $main-color;
+                        }
+                    }
+                }
+            }        
+
+                        
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@use "../../scss/" as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+    z-index: 99;
+    transition: height 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 15px rgb(0 0 0 / 30%);
+
+
+    @include mobile {
+        .menu__mob {
+            display: block;
+        }
+
+        .origin-top-right {
+            padding: 0 !important;
+        }
+        
+    }
+    @include tablet {
+
+        .origin-top-right {
+            padding: 0 !important;
+        }
+        
+    }
+}
+
+@include mobile {
+    .showFilms__content .ant-tabs-tab {
+        font-size: 18px !important;
+    }
+    .showFilms__item {
+        padding: 10 40px !important;
+    }
+}
+
+.info__icon {
+
+    .anticon {
+        font-size: 18px;
+        padding-right: 10px;
+    }
+    .info__logout {
+        cursor: pointer;
+    }
+}
+
+.shirnk {
+    background: rgba(255, 255, 255, 0.9) !important;
+    
+    .logo img {
+        width: 40px;
+    }
+    .header__login img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .header__nav{
+        color: $black;
+        
+    }
+    .header__login {
+        color: $black;
+    }
+
+    
+}
