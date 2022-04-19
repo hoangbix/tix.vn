@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, NavLink } from "react-router-dom";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
@@ -8,17 +8,18 @@ import TextField from "./TextField";
 import "./login.scss";
 import logo from "../../assets/images/logo.png";
 import bg from "../../assets/images/bg2.jpg";
-
-import { ThongTinNguoiDungReducer } from "../../redux/reducers/QuanLyNguoiDungReducer/ThongTinNguoiDungReducer";
 import {
   DangKyAction,
   DangNhapAction,
 } from "../../redux/actions/QuanLyNguoiDungAction";
+import { ChuyenHuongReducer } from "../../redux/reducers/QuanLyNguoiDungReducer/ChuyenHuongReducer";
 
 const Login = () => {
   const [classContainers, setClassContainers] = useState("");
+  const { chuyenHuong } = useSelector((state) => state.ChuyenHuongReducer);
   const dispatch = useDispatch();
 
+  console.log(chuyenHuong);
   const validateLogin = Yup.object({
     taiKhoan: Yup.string()
       .required("Vui lòng nhập tài khoản!")
@@ -71,7 +72,7 @@ const Login = () => {
         hoTen: "",
       }}
       validationSchema={validate}
-      onSubmit={async (values) => {
+      onSubmit={(values) => {
         console.log(values);
         const thongTinDangKy = {
           taiKhoan: values.taiKhoan,
@@ -81,12 +82,11 @@ const Login = () => {
           maNhom: values.maNhom,
           hoTen: values.hoTen,
         };
-        const thongTinDangNhap = {
-          taiKhoan: values.taiKhoan,
-          matKhau: values.matKhau,
-        };
-        await dispatch(DangKyAction(thongTinDangKy));
-        dispatch(DangNhapAction(thongTinDangNhap));
+        // const thongTinDangNhap = {
+        //   taiKhoan: values.taiKhoan,
+        //   matKhau: values.matKhau,
+        // };
+        dispatch(DangKyAction(thongTinDangKy));
       }}
     >
       {(formik) => {
@@ -104,9 +104,9 @@ const Login = () => {
                 <img src={logo} alt="logo" />
               </NavLink>
             </div>
-            <div className="form__login">
-              <div className={`login__container ${classContainers}`}>
-                <div className="form-container sign-up-container form__dang-ky">
+            <div className="form__login container">
+              <div className={`login__container  ${chuyenHuong}`}>
+                <div className="form-container sign-up-container form__dang-ky ">
                   <Form>
                     <h3>Đăng ký</h3>
                     <TextField
@@ -141,9 +141,24 @@ const Login = () => {
                       type="text"
                     />
                     <button type="submit">Đăng Ký</button>
+                    <div className="form-dang-ky-chuyen">
+                      <p>
+                        Nếu đã có tài khoản, vui lòng{" "}
+                        <span
+                          style={{ cursor: "pointer" }}
+                          onClick={() => {
+                            dispatch({
+                              type: "CHUYEN_HUONG_NULL",
+                            });
+                          }}
+                        >
+                          Đăng Nhập
+                        </span>
+                      </p>
+                    </div>
                   </Form>
                 </div>
-                <div className="form-container sign-in-container form__dang-nhap">
+                <div className="form-container sign-in-container form__dang-nhap ">
                   <Formik
                     initialValues={{
                       taiKhoan: "",
@@ -177,6 +192,21 @@ const Login = () => {
                           >
                             Đăng nhập
                           </button>
+                          <div className="form-dang-ky-chuyen">
+                            <p>
+                              Nếu chưa có tài khoản, vui lòng{" "}
+                              <span
+                                style={{ cursor: "pointer" }}
+                                onClick={() => {
+                                  dispatch({
+                                    type: "CHUYEN_HUONG",
+                                  });
+                                }}
+                              >
+                                Đăng Ký
+                              </span>
+                            </p>
+                          </div>
                         </Form>
                       );
                     }}
@@ -191,7 +221,9 @@ const Login = () => {
                         className="ghost"
                         id="signIn"
                         onClick={() => {
-                          setClassContainers("");
+                          dispatch({
+                            type: "CHUYEN_HUONG_NULL",
+                          });
                         }}
                       >
                         Đăng nhập
@@ -204,7 +236,9 @@ const Login = () => {
                         className="ghost"
                         id="signUp"
                         onClick={() => {
-                          setClassContainers("right-panel-active");
+                          dispatch({
+                            type: "CHUYEN_HUONG",
+                          });
                         }}
                       >
                         Đăng ký

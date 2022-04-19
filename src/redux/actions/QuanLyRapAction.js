@@ -54,22 +54,13 @@ export const DanhSachRapAction = () => {
 export const LayDanhSachPhongVeAction = (maLichChieu) => {
   return async (dispatch) => {
     try {
-      dispatch({
-        type: "DISPLAY_LOAD",
-      });
       const res = await apiQuanLyRap.apiLayDanhSachPhongVe(maLichChieu);
       res.statusCode === 200 &&
         dispatch({
           type: "DANH_SACH_GHE",
           thongTinPhongVe: res.content,
         });
-      dispatch({
-        type: "HIDE_LOAD",
-      });
     } catch (error) {
-      dispatch({
-        type: "HIDE_LOAD",
-      });
       console.log(error);
     }
   };
@@ -93,9 +84,6 @@ export const DatVeAction = (thongTinVe) => {
         thongTinVe.maLichChieu
       );
     } catch (error) {
-      dispatch({
-        type: "HIDE_LOAD",
-      });
       console.log(error.response);
     }
   };

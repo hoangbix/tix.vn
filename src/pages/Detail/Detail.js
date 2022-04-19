@@ -83,16 +83,15 @@ const Detail = () => {
             blur={5}
           >
             <div className="detail__content__header">
-              <div className="grid grid-cols-4 md:grid-cols-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                 <div className="detail__content__header__left d-flex align-items-center col-span-4">
-                  <div className="grid grid-cols-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 ">
                     <div className="detail__content--card">
                       <div className="detail__content__header__left__poster">
                         <img src={chiTietPhimVaRap?.hinhAnh} alt="" />
                       </div>
                     </div>
                     <div className="detail__content__header__left__content">
-                      {/* <p>{chiTietPhimVaRap?.ngayKhoiChieu}</p> */}
                       <div className="detail__content__header__left__content-title">
                         <h2>{chiTietPhimVaRap?.tenPhim}</h2>
                       </div>
@@ -102,26 +101,26 @@ const Detail = () => {
                           ? "Đang chiếu"
                           : "Sắp chiếu"}
                       </p>
-                      <p>{chiTietPhimVaRap?.moTa}</p>
+                      <p className="imdb2">{chiTietPhimVaRap?.moTa}</p>
                     </div>
                   </div>
-                </div>
-                <div className="detail__content__right ">
-                  <div className="clearfix detail__content__right--review ">
-                    <div className={renderRevies()}>
-                      <span>{renderReviesText()}</span>
-                      <div className="slice">
-                        <div className="bar" />
-                        <div className="fill" />
+                  <div className="detail__content__right ">
+                    <div className="clearfix detail__content__right--review ">
+                      <div className={renderRevies()}>
+                        <span>{renderReviesText()}</span>
+                        <div className="slice">
+                          <div className="bar" />
+                          <div className="fill" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="detail__content--review-title">
-                    <Rate
-                      allowHalf
-                      disabled
-                      defaultValue={chiTietPhimVaRap?.danhGia / 2}
-                    />
+                    <div className="detail__content--review-title">
+                      <Rate
+                        allowHalf
+                        disabled
+                        defaultValue={chiTietPhimVaRap?.danhGia / 2}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>

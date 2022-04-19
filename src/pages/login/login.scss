@@ -136,7 +136,9 @@
 	left: 0;
 	width: 50%;
 	z-index: 2;
-
+	@include mobile {
+		width: 100%;
+	}
     form {
 
         h3 {
@@ -156,6 +158,10 @@
 	width: 50%;
 	opacity: 0;
 	z-index: 1;
+	@include mobile {
+		width: 100%;
+		left: -100%;
+	}
 }
 
 .login__container.right-panel-active .sign-up-container {
@@ -186,6 +192,10 @@
 	overflow: hidden;
 	transition: transform 0.6s ease-in-out;
 	z-index: 100;
+	padding-right: 0px;
+	@include mobile {
+		display:none;
+	}
 }
 
 .login__container.right-panel-active .overlay-container{
@@ -356,8 +366,22 @@
     letter-spacing: 0 !important;;
     margin: 0 !important;
 }
-
-
+.error__block {
+	display: block;
+}
+.form-dang-ky-chuyen {
+	display: none;
+	p {
+		font-weight: 500;
+		span {
+			color: $main-color;
+			display: inline;
+		}
+	}
+	@include mobile {
+		display:inline-block;
+	}
+}
 
 input:focus {
     outline: none !important;

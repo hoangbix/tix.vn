@@ -13,7 +13,9 @@ const TextField = ({ ...props }) => {
         {...field}
         {...props}
       />
-      <ErrorMessage name={field.name} />
+      <span className="error__block">
+        <ErrorMessage name={field.name} />
+      </span>
     </div>
   );
 };

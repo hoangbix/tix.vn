@@ -9,6 +9,7 @@ import { DanhSachGheDangDatReducer } from "./QuanLyRapReducer/DanhSachGheDangDat
 import { ThongTinPhimReducer } from "./QuanLyPhimReducer/ThongTinPhimReducer";
 import { LoadingReducer } from "./LoadingReducer";
 import { DanhSachNguoiDungReducer } from "./QuanLyNguoiDungReducer/DanhSachNguoiDungReducer";
+import { ChuyenHuongReducer } from "./QuanLyNguoiDungReducer/ChuyenHuongReducer";
 
 const rootReducer = combineReducers({
   DanhSachPhimReducer,
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   ThongTinPhimReducer,
   LoadingReducer,
   DanhSachNguoiDungReducer,
+  ChuyenHuongReducer,
 });
 
 export default rootReducer;

@@ -110,20 +110,20 @@ export default function Navbar() {
               </Link>
 
               <Link
-                to="/cum-rap"
+                to=""
                 className="text-sm font-medium text-gray-500 hover:text-gray-900"
               >
                 Cụm rạp
               </Link>
               <Link
-                to="/tin-tuc"
+                to=""
                 className="text-sm font-medium text-gray-500 hover:text-gray-900"
               >
                 Tin tức
               </Link>
 
               <Link
-                to="/ung-dung"
+                to=""
                 className="text-sm font-medium text-gray-500 hover:text-gray-900"
               >
                 Ứng dụng
@@ -320,6 +320,9 @@ export default function Navbar() {
                       >
                         {localStor?.hoTen}
                       </Link>
+                      <div className="pt-3" onClick={handelLogout}>
+                        Đăng Xuất
+                      </div>
                     </p>
                   )}
                 </div>

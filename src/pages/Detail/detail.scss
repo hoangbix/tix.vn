@@ -12,46 +12,74 @@
     &__content__header {
         margin-top: 6rem;
         margin-bottom: 6rem;
+        
         &__left {
             padding: 0 4rem;
-    
+           
+            @include mobile {padding: 0}
+            
             &__poster{
                 flex: 1;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 position: relative;
-                width: 250px;
                 
                 img {
-                    width: 100%;
+                    width: 400px;
                     border-radius: 30px;
                     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
                     align-items: center;
+                    
+                    @include tablet {
+                        width: 100%;
+                        margin: auto;
+                    }
+                    
                 }
                 
             }
             &__content {
                 padding: 0 1rem;
-
+               margin-top: 6rem;
                 &-title h2 {
                     color: $white;
                     font-weight: 600;
-                    font-size: 2rem;
+                   font-size: 2rem;
+                    @include mobile {
+                        font-size: 1rem;
+                    }
                 }
                 .imdb {
                     font-size: .8rem;
                 }
-                
+
+                @include tablet {
+                    padding-top: 1rem;
+                    text-align: center;
+                    margin-top: 0.5rem;
+                    .imdb2 {
+                        word-break: break-word;
+                    }
+                }
+                p {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                }
             }
         }
     }
     &__content--review {
         line-height:50px;
-
+        
     }
     .detail__content__right {
         margin-top: 6rem !important;
+        
+        @include tablet {
+            display: none;
+         }
     }
    .detail-list {
         width: 70%;
@@ -63,7 +91,10 @@
         overflow-x:hidden !important;
         padding: 10px;
         margin: auto;
-
+        @include mobile {
+            height: auto;
+            width: 100%;
+        }
         &::-webkit-scrollbar {
             width: 5px;
            left: 10px;
@@ -85,7 +116,9 @@
             border-bottom: 1px solid #ccc;
             &--top {
                 @include flex(center, left);
-
+                @include mobile {
+                    @include flex(center, center);
+                }
                 &-text {
                     padding-left: 20px;
 
@@ -96,9 +129,17 @@
                     span {
                         font-size: .8rem;
                         font-weight: 500;
+                        
                     }
+                    @include mobile {
+                        display: block;
+                    }
+                    
                 }
+                
+                
             }
+            
             &-footer {
                 &-btn{
                     padding-top: 10px;
@@ -129,7 +170,13 @@
                                 color: $main-color;
                             }
                         }
+                        @include mobile {
+                            margin: 7px 15px;
+                        }
                     }
+                }
+                @include mobile {
+                    text-align: center;
                 }
                 
             }
@@ -137,6 +184,7 @@
         .ant-tabs-tab {
             border-bottom: 1px solid #ccc;
         }
+        
         
     }
     .detail-no-list {

@@ -100,8 +100,8 @@ const ListFilm = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 0.5,
-          slidesToScroll: 0.5,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           initialSlide: 2,
           centerMode: true,
         },

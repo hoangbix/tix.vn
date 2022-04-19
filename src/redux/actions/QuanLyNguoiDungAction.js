@@ -70,38 +70,24 @@ export const DangNhapAction = (thongTinDangNhap) => {
 export const DangKyAction = (thongTinDangKy) => {
   return async (dispatch) => {
     try {
-      dispatch({
-        type: "DISPLAY_LOAD",
-      });
       const res = await apiQuanLyNguoiDung.apiDangKy(thongTinDangKy);
-      dispatch({
-        type: "HIDE_LOAD",
-      });
-      let timerInterval;
-      Swal.fire({
-        title: "Đăng ký thành công",
-        html: "Bạn sẽ được chuyển hướng sau <b></b> ",
-        timer: 3500,
-        timerProgressBar: true,
-        didOpen: () => {
-          Swal.showLoading();
-          const b = Swal.getHtmlContainer().querySelector("b");
-          timerInterval = setInterval(() => {
-            b.textContent = Swal.getTimerLeft();
-          }, 100);
-        },
-        willClose: () => {
-          clearInterval(timerInterval);
-        },
-      }).then((result) => {
-        if (result.dismiss === Swal.DismissReason.timer) {
-          history.back();
-        }
-      });
+
+      res.statusCode === 200 &&
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Đăng ký thành công! Vui lòng đăng nhập lại",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      res.statusCode === 200 &&
+        setTimeout(
+          dispatch({
+            type: "CHUYEN_HUONG_NULL",
+          }),
+          3000
+        );
     } catch (error) {
-      dispatch({
-        type: "HIDE_LOAD",
-      });
       Swal.fire({
         icon: "error",
         title: "Đăng ký thất bại!",
