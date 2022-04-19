@@ -31,25 +31,25 @@ const store = createStore(
 
 const root = createRoot(document.getElementById("root"));
 
-connection
-  .start()
-  .then(() => {
-    root.render(
-      <Provider store={store}>
-        <Router>
-          <App />
-        </Router>
-      </Provider>
-    );
-  })
-  .catch((error) => {
-    alert(error.message);
-  });
+// connection
+//   .start()
+//   .then(() => {
+//     root.render(
+//       <Provider store={store}>
+//         <Router>
+//           <App />
+//         </Router>
+//       </Provider>
+//     );
+//   })
+//   .catch((error) => {
+//     alert(error.message);
+//   });
 
-// root.render(
-//   <Provider store={store}>
-//     <Router>
-//       <App />
-//     </Router>
-//   </Provider>
-// );
+root.render(
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>
+);
