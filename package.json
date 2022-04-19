@@ -1,8 +1,8 @@
 {
   "name": "tix",
   "version": "0.1.0",
+  "homepage": "https://hoangbix.github.io/tix.vn",
   "private": true,
-  "homepage": "https://github.com/hoangbix/tix.vn",
   "dependencies": {
     "@aspnet/signalr": "^1.0.27",
     "@emotion/react": "^11.9.0",

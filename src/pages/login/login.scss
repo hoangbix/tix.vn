@@ -4,6 +4,8 @@
 .form__login h3 {
 	font-weight: bold;
 	margin: 0;
+		color: black;
+		font-size: 1.5rem;
 }
 
 .form__login h2 {
@@ -19,7 +21,7 @@
 	font-weight: 100;
 	line-height: 20px;
 	letter-spacing: 0.5px;
-	margin: 20px 0 30px;
+	margin: 20px 0 0px;
 }
 
 .form__login span {
@@ -69,7 +71,8 @@
 	position: fixed;
 	top: 1rem;
 	right: 1rem;
-   
+	z-index: 999;
+	
 } 
 .login__logo img {
 	width:50px;
@@ -103,7 +106,7 @@
 	overflow: hidden;
 	width: 800px;
 	max-width: 100%;
-	min-height: 500px;
+	min-height: 550px;
 }
 
 .form-container {
@@ -143,7 +146,6 @@
 
         h3 {
             color: $black;
-            font-size: 1rem;
             margin-bottom: 2rem;
         }
     }
@@ -389,6 +391,8 @@ input:focus {
 
 .form__dang-ky {
 
+	
+	
 	input {
 		width: 300px;
 	}

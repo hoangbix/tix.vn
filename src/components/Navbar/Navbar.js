@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { Popover, Transition, Menu } from "@headlessui/react";
 import { useDispatch } from "react-redux";
@@ -86,7 +86,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Popover className="relative bg-white navbar">
+      <Popover className="relative navbar">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-14">
           <div className="flex justify-between items-center border-gray-100 py-2 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
