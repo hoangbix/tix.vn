@@ -1,4 +1,4 @@
-import { connection } from "../../index";
+// import { connection } from "../../index";
 import apiQuanLyRap from "../../api/apiQuanLyRap";
 import Swal from "sweetalert2";
 
@@ -78,11 +78,11 @@ export const DatVeAction = (thongTinVe) => {
           datVe: res.content,
         });
 
-      connection.invoke(
-        "datGheThanhCong",
-        localStor?.taiKhoan,
-        thongTinVe.maLichChieu
-      );
+      // connection.invoke(
+      //   "datGheThanhCong",
+      //   localStor?.taiKhoan,
+      //   thongTinVe.maLichChieu
+      // );
     } catch (error) {
       console.log(error.response);
     }
@@ -103,6 +103,6 @@ export const datGheAction = (ghe, maLichChieu) => {
 
     danhSachGheDangDat = JSON.stringify(danhSachGheDangDat);
 
-    connection.invoke("datGhe", taiKhoan, danhSachGheDangDat, maLichChieu);
+    // connection.invoke("datGhe", taiKhoan, danhSachGheDangDat, maLichChieu);
   };
 };

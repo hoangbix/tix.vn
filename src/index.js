@@ -19,10 +19,10 @@ import { DOMAIN } from "./util/config";
 
 import App from "./App";
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-export const connection = new signalR.HubConnectionBuilder()
-  .withUrl(`${DOMAIN}/DatVeHub`)
-  .configureLogging(signalR.LogLevel.Information)
-  .build();
+// export const connection = new signalR.HubConnectionBuilder()
+//   .withUrl(`${DOMAIN}/DatVeHub`)
+//   .configureLogging(signalR.LogLevel.Information)
+//   .build();
 
 const store = createStore(
   rootReducer,
