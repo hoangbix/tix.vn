@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tix.vn/static/css/main.23bb9e95.css",
-    "main.js": "/tix.vn/static/js/main.e1647512.js",
+    "main.js": "/tix.vn/static/js/main.4c770357.js",
     "static/media/review-tan-tich-quy-am-relic-ba-the-he-va-moi-lien-ket-15965255784224.png": "/tix.vn/static/media/review-tan-tich-quy-am-relic-ba-the-he-va-moi-lien-ket-15965255784224.9547a9239b900e6fccdd.png",
     "static/media/american-sniper-chinh-nghia-hay-phi-nghia-15905660338111.png": "/tix.vn/static/media/american-sniper-chinh-nghia-hay-phi-nghia-15905660338111.c0c23c9f744e303d9d0f.png",
     "static/media/dong-gia-1k-ve-khi-mua-ve-qua-tix-16010092946804.png": "/tix.vn/static/media/dong-gia-1k-ve-khi-mua-ve-qua-tix-16010092946804.9eb89c16da389d359b62.png",
@@ -34,10 +34,10 @@
     "static/media/slick.woff": "/tix.vn/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/tix.vn/index.html",
     "main.23bb9e95.css.map": "/tix.vn/static/css/main.23bb9e95.css.map",
-    "main.e1647512.js.map": "/tix.vn/static/js/main.e1647512.js.map"
+    "main.4c770357.js.map": "/tix.vn/static/js/main.4c770357.js.map"
   },
   "entrypoints": [
     "static/css/main.23bb9e95.css",
-    "static/js/main.e1647512.js"
+    "static/js/main.4c770357.js"
   ]
 }
