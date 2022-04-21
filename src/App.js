@@ -26,6 +26,7 @@ function App() {
         <Route path="detail/:id" element={<Detail />} />
         <Route path="checkout/:id" element={<Checkout />} />
         <Route path="login" element={<Login />} />
+        <Route path="*" element={<Home />} />
         <Route element={<Navbar />}>
           <Route path="admin" element={<Admin />}>
             <Route path="listfilm" element={<ListFilm />} />

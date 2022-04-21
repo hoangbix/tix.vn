@@ -18,7 +18,7 @@ import {
 import { LayDanhSachPhongVeReducer } from "../../redux/reducers/QuanLyRapReducer/LayDanhSachPhongVeReducer";
 import { DanhSachGheDangDatReducer } from "../../redux/reducers/QuanLyRapReducer/DanhSachGheDangDat";
 import Swal from "sweetalert2";
-// import { connection } from "../../index";
+import { connection } from "../../index";
 
 export const Checkout = () => {
   let navigate = useNavigate();
@@ -34,46 +34,46 @@ export const Checkout = () => {
   useEffect(() => {
     dispatch(LayDanhSachPhongVeAction(id));
 
-    // connection.on("datVeThanhCong", () => {
-    //   dispatch(LayDanhSachPhongVeAction(id));
-    // });
-    // // LOAD DANH SÁCH GHẾ NGƯỜI KHÁC ĐANG ĐẶT KHI VÀO TRANG
-    // connection.invoke("loadDanhSachGhe", id);
+    connection.on("datVeThanhCong", () => {
+      dispatch(LayDanhSachPhongVeAction(id));
+    });
+    // LOAD DANH SÁCH GHẾ NGƯỜI KHÁC ĐANG ĐẶT KHI VÀO TRANG
+    connection.invoke("loadDanhSachGhe", id);
 
-    // // Load danh sách ghế đang đặt từ server
-    // connection.on("loadDanhSachGheDaDat", (dsGheKhachDat) => {
-    //   // B1.Loại mình ra khỏi danh sách ghế
-    //   dsGheKhachDat = dsGheKhachDat.filter(
-    //     (item) => item.taiKhoan !== localStor?.taiKhoan
-    //   );
-    //   //B2. gộp danh sách ghế khách đặt ở tất cả user thành 1 mảng
-    //   let arrGheKhachDat = dsGheKhachDat.reduce((result, item, index) => {
-    //     let arrGhe = JSON.parse(item.danhSachGhe);
-    //     return [...result, ...arrGhe];
-    //   }, []);
+    // Load danh sách ghế đang đặt từ server
+    connection.on("loadDanhSachGheDaDat", (dsGheKhachDat) => {
+      // B1.Loại mình ra khỏi danh sách ghế
+      dsGheKhachDat = dsGheKhachDat.filter(
+        (item) => item.taiKhoan !== localStor?.taiKhoan
+      );
+      //B2. gộp danh sách ghế khách đặt ở tất cả user thành 1 mảng
+      let arrGheKhachDat = dsGheKhachDat.reduce((result, item, index) => {
+        let arrGhe = JSON.parse(item.danhSachGhe);
+        return [...result, ...arrGhe];
+      }, []);
 
-    //   // Xóa ghế trùng nhau
-    //   arrGheKhachDat = _.uniqBy(arrGheKhachDat, "maGhe");
+      // Xóa ghế trùng nhau
+      arrGheKhachDat = _.uniqBy(arrGheKhachDat, "maGhe");
 
-    //   //B3 đưa dữ liệu ghế lên redux
+      //B3 đưa dữ liệu ghế lên redux
 
-    //   dispatch({
-    //     type: "DAT_GHE",
-    //     arrGheKhachDat,
-    //   });
+      dispatch({
+        type: "DAT_GHE",
+        arrGheKhachDat,
+      });
 
-    //   // BẮT SỰ KIỆN KHI NGƯỜI CHỌN VÉ RELOAD LẠI TRANG
-    //   window.addEventListener("beforeunload", clearGhe);
-    //   return () => {
-    //     clearGhe();
-    //     window.removeEventListener("beforeunload", clearGhe);
-    //   };
-    // });
+      // BẮT SỰ KIỆN KHI NGƯỜI CHỌN VÉ RELOAD LẠI TRANG
+      window.addEventListener("beforeunload", clearGhe);
+      return () => {
+        clearGhe();
+        window.removeEventListener("beforeunload", clearGhe);
+      };
+    });
   }, []);
 
-  // const clearGhe = function (event) {
-  //   connection.invoke("huyDat", localStor?.taiKhoan, id);
-  // };
+  const clearGhe = function (event) {
+    connection.invoke("huyDat", localStor?.taiKhoan, id);
+  };
 
   const renderGhe = () => {
     return danhSachGhe?.map((ghe, i) => {

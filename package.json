@@ -1,7 +1,6 @@
 {
   "name": "tix",
   "version": "0.1.0",
-  "homepage": "https://hoangbix.github.io/tix.vn",
   "private": true,
   "dependencies": {
     "@aspnet/signalr": "^1.0.27",

@@ -248,7 +248,7 @@ export default function Navbar() {
             className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
             <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-              <div className="pt-1 pb-3 px-5">
+              <div className="pt-1 pb-3 px-3">
                 <div className="flex items-center justify-between">
                   <div>
                     <img className="h-10 w-auto" src={logo} alt="Workflow" />
@@ -297,6 +297,9 @@ export default function Navbar() {
                     <>
                       <Link
                         to="/login"
+                        onClick={() => {
+                          dispatch({ type: "CHUYEN_HUONG" });
+                        }}
                         className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                       >
                         Đăng ký
